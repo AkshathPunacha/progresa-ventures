@@ -127,7 +127,7 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between py-4">
         <a href="#top" className="flex items-center gap-3 group">
           <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-ink/10 bg-cream">
-            <img src="/logo.jpeg" alt="Progresa Ventures" className="h-full w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progresa Ventures" className="h-full w-full object-cover" />
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg text-ink">Progresa</div>
@@ -494,7 +494,7 @@ function Services() {
 
 function WhyUs() {
   return (
-    <section id="why" className="py-24 lg:py-32 bg-[#F3F1EA] relative overflow-hidden">
+    <section id="why" className="py-24 lg:py-32 bg-[#EEF6F1] relative overflow-hidden">
       <div className="grain" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10">
@@ -532,7 +532,7 @@ function WhyUs() {
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fade}
                 custom={i}
-                className="bg-[#F3F1EA] p-7 lg:p-8 group hover:bg-cream transition-colors duration-500"
+                className="bg-[#EEF6F1] p-7 lg:p-8 group hover:bg-cream transition-colors duration-500"
               >
                 <div className="flex items-start gap-4">
                   <div className="h-9 w-9 rounded-full bg-sage/15 text-sage-dark inline-flex items-center justify-center shrink-0 group-hover:bg-sage group-hover:text-cream transition-colors duration-500">
@@ -612,7 +612,7 @@ function ContactSection() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nBusiness Type: ${form.business}\n\nMessage:\n${form.message}`
     );
-    window.location.href = `mailto:hello@progresaventures.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:progressa.ventures@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -643,11 +643,11 @@ function ContactSection() {
           </p>
 
           <div className="mt-10 space-y-4 text-sm">
-            <a href="mailto:hello@progresaventures.com" className="flex items-center gap-3 text-cream/85 hover:text-sage-light transition-colors">
-              <Mail size={16} /> hello@progresaventures.com
+            <a href="mailto:progressa.ventures@gmail.com" className="flex items-center gap-3 text-cream/85 hover:text-sage-light transition-colors">
+              <Mail size={16} /> progressa.ventures@gmail.com
             </a>
-            <a href="tel:+919999999999" className="flex items-center gap-3 text-cream/85 hover:text-sage-light transition-colors">
-              <Phone size={16} /> +91 99999 99999
+            <a href="tel:+918879946327" className="flex items-center gap-3 text-cream/85 hover:text-sage-light transition-colors">
+              <Phone size={16} /> +91 88799 46327
             </a>
             <div className="flex items-center gap-3 text-cream/85">
               <MapPin size={16} /> Bengaluru, India
@@ -741,7 +741,7 @@ function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-cream/15 bg-cream">
-              <img src="/logo.jpeg" alt="Progresa Ventures" className="h-full w-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progresa Ventures" className="h-full w-full object-cover" />
             </div>
             <div className="leading-tight">
               <div className="font-display text-xl text-cream">Progresa Ventures</div>
@@ -782,10 +782,10 @@ function Footer() {
             ))}
           </div>
           <a
-            href="mailto:hello@progresaventures.com"
+            href="mailto:progressa.ventures@gmail.com"
             className="mt-6 inline-flex items-center gap-2 text-sm text-cream hover:text-sage-light transition-colors"
           >
-            hello@progresaventures.com <ArrowUpRight size={14} />
+            progressa.ventures@gmail.com <ArrowUpRight size={14} />
           </a>
         </div>
       </div>

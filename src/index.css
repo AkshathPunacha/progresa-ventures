@@ -7,23 +7,23 @@ html {
 }
 
 body {
-  background-color: #FAF9F6;
-  color: #1A202C;
+  background-color: #FFFFFF;
+  color: #0F2A1F;
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: #6E9A82;
-  color: #FAF9F6;
+  background: #3F8F6B;
+  color: #FFFFFF;
 }
 
 /* Custom thin scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #FAF9F6; }
-::-webkit-scrollbar-thumb { background: #D8D6CF; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #6E9A82; }
+::-webkit-scrollbar-track { background: #FFFFFF; }
+::-webkit-scrollbar-thumb { background: #D5E4DB; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #3F8F6B; }
 
 .font-display {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -39,10 +39,10 @@ body {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(26, 32, 44, 0.18);
+  border-bottom: 1px solid rgba(15, 42, 31, 0.18);
   padding: 1.6rem 0 0.6rem 0;
   font-size: 1rem;
-  color: #1A202C;
+  color: #0F2A1F;
   outline: none;
   transition: border-color 0.3s ease;
   border-radius: 0;
@@ -52,7 +52,7 @@ body {
   position: absolute;
   left: 0;
   top: 1.5rem;
-  color: rgba(26, 32, 44, 0.55);
+  color: rgba(15, 42, 31, 0.55);
   font-size: 0.95rem;
   pointer-events: none;
   transition: all 0.25s ease;
@@ -67,19 +67,19 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6E9A82;
+  color: #3F8F6B;
 }
 .field input:focus,
 .field textarea:focus,
 .field select:focus {
-  border-bottom-color: #6E9A82;
+  border-bottom-color: #3F8F6B;
 }
 
 .grain {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.04;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }

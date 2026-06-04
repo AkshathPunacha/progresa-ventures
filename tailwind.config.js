@@ -4,12 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#FAF9F6',
-        ink: '#1A202C',
+        cream: '#FFFFFF',
+        ink: '#0F2A1F',
         sage: {
-          DEFAULT: '#6E9A82',
-          dark: '#557A66',
-          light: '#A8C4B5',
+          DEFAULT: '#3F8F6B',
+          dark: '#2F6E51',
+          light: '#C9E4D4',
+        },
+        forest: {
+          DEFAULT: '#0F2A1F',
+          deep: '#081A12',
         },
       },
       fontFamily: {
