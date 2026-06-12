@@ -181,24 +181,22 @@ function Nav() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden bg-cream/95 backdrop-blur border-t border-ink/5 overflow-hidden"
           >
-            <div className="px-6 py-6 flex flex-col gap-5">
+            <div className="px-6 py-6 flex flex-col items-start gap-5">
               {links.map((l) => (
-                <a
+                <button
                   key={l.href}
-                  href={l.href}
                   onClick={(e) => handleLinkClick(e, l.href)}
-                  className="text-ink/80 text-lg"
+                  className="text-ink/80 text-lg text-left py-1 w-full"
                 >
                   {l.label}
-                </a>
+                </button>
               ))}
-              <a
-                href="#contact"
+              <button
                 onClick={(e) => handleLinkClick(e, '#contact')}
                 className="inline-flex items-center gap-2 text-base font-medium text-cream bg-ink rounded-full px-5 py-3 w-fit"
               >
                 Get in Touch <ArrowUpRight size={16} />
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
