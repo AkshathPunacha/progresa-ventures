@@ -433,18 +433,18 @@ function Services() {
                       onMouseEnter={() => setActive(s.id)}
                       onFocus={() => setActive(s.id)}
                       onClick={() => setActive(s.id)}
-                      className="w-full flex items-center justify-between gap-6 py-5 lg:py-6 group text-left"
+                      className="w-full flex items-center justify-between gap-4 lg:gap-6 py-3 lg:py-6 group text-left"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3 lg:gap-4">
                         <span
-                          className={`h-10 w-10 rounded-full inline-flex items-center justify-center transition-all duration-500 ${
+                          className={`h-8 w-8 lg:h-10 lg:w-10 rounded-full inline-flex items-center justify-center transition-all duration-500 ${
                             isActive ? 'bg-sage text-cream' : 'bg-ink/5 text-ink/60 group-hover:bg-ink/10'
                           }`}
                         >
-                          <Icon size={16} />
+                          <Icon size={14} />
                         </span>
                         <span
-                          className={`font-display text-2xl sm:text-3xl transition-colors ${
+                          className={`font-display text-xl lg:text-3xl transition-colors ${
                             isActive ? 'text-ink' : 'text-ink/55 group-hover:text-ink'
                           }`}
                         >
@@ -452,7 +452,7 @@ function Services() {
                         </span>
                       </div>
                       <ArrowUpRight
-                        size={20}
+                        size={18}
                         className={`shrink-0 transition-all duration-500 ${
                           isActive
                             ? 'text-sage opacity-100 translate-x-0 -translate-y-0'
