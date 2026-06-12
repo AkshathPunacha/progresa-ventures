@@ -118,6 +118,16 @@ function Nav() {
     { href: '#contact', label: 'Contact' },
   ];
 
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    setOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, null, href);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
@@ -140,6 +150,7 @@ function Nav() {
             <a
               key={l.href}
               href={l.href}
+              onClick={(e) => handleLinkClick(e, l.href)}
               className="relative text-sm text-ink/70 hover:text-ink transition-colors"
             >
               <span>{l.label}</span>
@@ -148,6 +159,7 @@ function Nav() {
           ))}
           <a
             href="#contact"
+            onClick={(e) => handleLinkClick(e, '#contact')}
             className="group inline-flex items-center gap-2 text-sm font-medium text-ink border border-ink/15 rounded-full px-5 py-2.5 hover:bg-ink hover:text-cream transition-all duration-300"
           >
             Get in Touch
@@ -171,13 +183,18 @@ function Nav() {
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {links.map((l) => (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-ink/80 text-lg">
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={(e) => handleLinkClick(e, l.href)}
+                  className="text-ink/80 text-lg"
+                >
                   {l.label}
                 </a>
               ))}
               <a
                 href="#contact"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleLinkClick(e, '#contact')}
                 className="inline-flex items-center gap-2 text-base font-medium text-cream bg-ink rounded-full px-5 py-3 w-fit"
               >
                 Get in Touch <ArrowUpRight size={16} />
