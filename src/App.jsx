@@ -127,10 +127,10 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between py-4">
         <a href="#top" className="flex items-center gap-3 group">
           <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-ink/10 bg-cream">
-            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progresa Ventures" className="h-full w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
           </div>
           <div className="leading-tight">
-            <div className="font-display text-lg text-ink">Progresa</div>
+            <div className="font-display text-lg text-ink">Progressa</div>
             <div className="text-[10px] tracking-[0.25em] uppercase text-ink/60">Ventures</div>
           </div>
         </a>
@@ -233,7 +233,7 @@ function Hero() {
             variants={fade}
             className="mt-8 max-w-xl text-ink/70 text-base sm:text-lg leading-relaxed"
           >
-            At Progresa Ventures, we help brands grow with a mix of creativity, strategy, and
+            At Progressa Ventures, we help brands grow with a mix of creativity, strategy, and
             AI-powered execution. We build marketing systems designed for visibility, engagement,
             and growth.
           </motion.p>
@@ -507,7 +507,7 @@ function WhyUs() {
           >
             <div className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-sage-dark mb-5">
               <span className="h-px w-8 bg-sage" />
-              Why Progresa Ventures
+              Why Progressa Ventures
             </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink">
               The studio of the
@@ -650,7 +650,7 @@ function ContactSection() {
               <Phone size={16} /> +91 88799 46327
             </a>
             <div className="flex items-center gap-3 text-cream/85">
-              <MapPin size={16} /> Bengaluru, India
+              <MapPin size={16} /> Mumbai, India
             </div>
           </div>
         </motion.div>
@@ -741,10 +741,10 @@ function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-cream/15 bg-cream">
-              <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progresa Ventures" className="h-full w-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
             </div>
             <div className="leading-tight">
-              <div className="font-display text-xl text-cream">Progresa Ventures</div>
+              <div className="font-display text-xl text-cream">Progressa Ventures</div>
               <div className="text-[10px] tracking-[0.25em] uppercase text-cream/50">Creative · Strategy · AI</div>
             </div>
           </div>
@@ -792,7 +792,7 @@ function Footer() {
 
       <div className="border-t border-cream/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-cream/45">
-          <div>© {new Date().getFullYear()} Progresa Ventures Private Limited. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Progressa Ventures Private Limited. All rights reserved.</div>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-cream transition-colors">Privacy</a>
             <a href="#" className="hover:text-cream transition-colors">Terms</a>
