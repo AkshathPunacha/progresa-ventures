@@ -127,7 +127,7 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between py-4">
         <a href="#top" className="flex items-center gap-3 group">
           <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-ink/10 bg-cream">
-            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}favicon.jpg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg text-ink">Progressa</div>
