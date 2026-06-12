@@ -209,7 +209,7 @@ function Hero() {
             className="inline-flex items-center gap-2 mb-8 text-xs tracking-[0.25em] uppercase text-sage-dark"
           >
             <span className="h-px w-8 bg-sage" />
-            A Creative + AI Studio
+            <span className="line-through opacity-60">A Creative</span> · AI Creative
           </motion.div>
 
           <motion.h1
