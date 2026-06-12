@@ -758,7 +758,7 @@ function Footer() {
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-full overflow-hidden ring-1 ring-cream/15 bg-cream">
-              <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}favicon.jpg`} alt="Progressa Ventures" className="h-full w-full object-cover" />
             </div>
             <div className="leading-tight">
               <div className="font-display text-xl text-cream">Progressa Ventures</div>
