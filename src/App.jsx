@@ -198,7 +198,7 @@ function Hero() {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section id="top" ref={ref} className="relative pt-36 pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+    <section id="top" ref={ref} className="relative pt-36 pb-12 lg:pt-44 lg:pb-32 overflow-hidden">
       <div className="grain" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
         <div className="lg:col-span-7">
@@ -282,7 +282,7 @@ function Hero() {
         </div>
 
         {/* Visual canvas */}
-        <div className="lg:col-span-5 relative h-[460px] sm:h-[560px] lg:h-[640px]">
+        <div className="lg:col-span-5 relative h-[380px] sm:h-[480px] lg:h-[640px] mt-12 lg:mt-0">
           <motion.div
             style={{ y: y1 }}
             initial={{ opacity: 0, scale: 0.96 }}
@@ -306,7 +306,7 @@ function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
-            className="absolute bottom-6 left-0 w-[58%] h-[48%] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,32,44,0.25)] ring-1 ring-ink/5"
+            className="absolute bottom-2 lg:bottom-6 left-0 w-[58%] h-[48%] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,32,44,0.25)] ring-1 ring-ink/5"
           >
             <img
               alt="AI creative"
