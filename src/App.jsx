@@ -354,7 +354,7 @@ function Marquee() {
       <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{ x: ['0%', '-50%'] }}
-        transition={{ duration: 28, ease: 'linear', repeat: Infinity }}
+        transition={{ duration: 12, ease: 'linear', repeat: Infinity }}
       >
         {row.map((w, i) => (
           <span key={i} className="font-display text-3xl sm:text-5xl text-ink/80 flex items-center gap-12">
