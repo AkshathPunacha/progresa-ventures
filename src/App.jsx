@@ -521,6 +521,108 @@ function Services() {
   );
 }
 
+function VideoShowcase() {
+  const handleLetTalkClick = (e) => {
+    e.preventDefault();
+    const target = document.querySelector('#contact');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, null, '#contact');
+    }
+  };
+
+  const videosList = [
+    { src: 'videos/ads.mp4', label: 'Ads' },
+    { src: 'videos/ugc.mp4', label: 'UGC' },
+    { src: 'videos/organic.mp4', label: 'Organic' },
+    { src: 'videos/influencer.mp4', label: 'Influencer' },
+  ];
+
+  return (
+    <section className="relative py-24 lg:py-32 bg-ink text-cream overflow-hidden border-t border-cream/10">
+      <div className="grain" />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: 2 Videos */}
+          <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 order-2 lg:order-1">
+            {videosList.slice(0, 2).map((vid) => (
+              <div key={vid.label} className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group ring-1 ring-cream/10 bg-cream/5">
+                <video
+                  src={`${import.meta.env.BASE_URL}${vid.src}`}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 bg-cream/10 backdrop-blur-md border border-cream/15 text-cream px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                  {vid.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Center Column: Text content */}
+          <div className="lg:col-span-6 text-center flex flex-col items-center justify-center order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-sage-light mb-6">
+              <span className="h-px w-8 bg-sage-light" />
+              Automated Creative Execution
+            </div>
+            
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+              MANUAL WORK.
+              <br />
+              <span className="font-sans text-xl sm:text-2xl lg:text-3xl font-light tracking-wide text-cream/70 lowercase block my-3 italic">
+                your team keeps doing.
+              </span>
+              AUTOMATED.
+            </h2>
+            
+            <p className="mt-8 text-cream/75 max-w-lg leading-relaxed text-sm sm:text-base">
+              Ads. UGC. Organic. Influencer. Marketplace. Progressa watches every signal, researches every trend and executes so your team does more without growing headcount.
+            </p>
+            
+            <a
+              href="#contact"
+              onClick={handleLetTalkClick}
+              className="mt-10 group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-cream text-ink overflow-hidden transition-all duration-300"
+            >
+              <span className="absolute inset-0 bg-sage translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+              <span className="relative font-medium tracking-wide">Let’s Talk</span>
+              <ArrowRight size={16} className="relative transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          {/* Right Column: 2 Videos */}
+          <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 order-3">
+            {videosList.slice(2, 4).map((vid) => (
+              <div key={vid.label} className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group ring-1 ring-cream/10 bg-cream/5">
+                <video
+                  src={`${import.meta.env.BASE_URL}${vid.src}`}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 bg-cream/10 backdrop-blur-md border border-cream/15 text-cream px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                  {vid.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+      <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-sage/15 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-sage/10 blur-3xl pointer-events-none" />
+    </section>
+  );
+}
+
 function WhyUs() {
   return (
     <section id="why" className="py-24 lg:py-32 bg-[#EEF6F1] relative overflow-hidden">
@@ -841,6 +943,7 @@ export default function App() {
         <Hero />
         <Marquee />
         <Services />
+        <VideoShowcase />
         <WhyUs />
         <Audience />
         <ContactSection />
