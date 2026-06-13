@@ -126,14 +126,14 @@ function Nav() {
         const headerOffset = 70; // collapsed header height
         const elementPosition = target.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
-        
+
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
         });
         window.history.pushState(null, null, href);
       }
-      
+
       setTimeout(() => {
         setOpen(false);
       }, 300);
@@ -144,9 +144,8 @@ function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? 'backdrop-blur-md bg-cream/80 border-b border-ink/5' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? 'backdrop-blur-md bg-cream/80 border-b border-ink/5' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between py-4">
         <a href="#top" className="flex items-center gap-3 group">
@@ -238,7 +237,7 @@ function Hero() {
             className="inline-flex items-center gap-2 mb-8 text-xs tracking-[0.25em] uppercase text-sage-dark"
           >
             <span className="h-px w-8 bg-sage" />
-            <span className="line-through opacity-60">A Creative</span> · AI Creative
+            <span className="line-through opacity-60">A Creative</span> · AI Studio
           </motion.div>
 
           <motion.h1
@@ -449,27 +448,24 @@ function Services() {
                     >
                       <div className="flex items-center gap-3 lg:gap-4">
                         <span
-                          className={`h-8 w-8 lg:h-10 lg:w-10 rounded-full inline-flex items-center justify-center transition-all duration-500 ${
-                            isActive ? 'bg-sage text-cream' : 'bg-ink/5 text-ink/60 group-hover:bg-ink/10'
-                          }`}
+                          className={`h-8 w-8 lg:h-10 lg:w-10 rounded-full inline-flex items-center justify-center transition-all duration-500 ${isActive ? 'bg-sage text-cream' : 'bg-ink/5 text-ink/60 group-hover:bg-ink/10'
+                            }`}
                         >
                           <Icon size={14} />
                         </span>
                         <span
-                          className={`font-display text-xl lg:text-3xl transition-colors ${
-                            isActive ? 'text-ink' : 'text-ink/55 group-hover:text-ink'
-                          }`}
+                          className={`font-display text-xl lg:text-3xl transition-colors ${isActive ? 'text-ink' : 'text-ink/55 group-hover:text-ink'
+                            }`}
                         >
                           {s.label}
                         </span>
                       </div>
                       <ArrowUpRight
                         size={18}
-                        className={`shrink-0 transition-all duration-500 ${
-                          isActive
-                            ? 'text-sage opacity-100 translate-x-0 -translate-y-0'
-                            : 'text-ink/30 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0'
-                        }`}
+                        className={`shrink-0 transition-all duration-500 ${isActive
+                          ? 'text-sage opacity-100 translate-x-0 -translate-y-0'
+                          : 'text-ink/30 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0'
+                          }`}
                       />
                     </button>
                   </motion.li>
@@ -543,7 +539,7 @@ function VideoShowcase() {
       <div className="grain" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: 2 Videos */}
           <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 order-2 lg:order-1">
             {videosList.slice(0, 2).map((vid) => (
@@ -570,7 +566,7 @@ function VideoShowcase() {
               <span className="h-px w-8 bg-sage-light" />
               Automated Creative Execution
             </div>
-            
+
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               MANUAL WORK.
               <br />
@@ -579,11 +575,11 @@ function VideoShowcase() {
               </span>
               AUTOMATED.
             </h2>
-            
+
             <p className="mt-8 text-cream/75 max-w-lg leading-relaxed text-sm sm:text-base">
               Ads. UGC. Organic. Influencer. Marketplace. Progressa watches every signal, researches every trend and executes so your team does more without growing headcount.
             </p>
-            
+
             <a
               href="#contact"
               onClick={handleLetTalkClick}
