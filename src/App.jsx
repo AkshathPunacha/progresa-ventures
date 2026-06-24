@@ -13,9 +13,7 @@ import {
   Mail,
   MapPin,
   Phone,
-  Instagram,
-  Linkedin,
-  Twitter,
+  CalendarDays,
   Play,
   Menu,
   X,
@@ -890,29 +888,20 @@ function Footer() {
         </div>
 
         <div className="md:col-span-4">
-          <div className="text-[11px] uppercase tracking-[0.25em] text-cream/40 mb-4">Elsewhere</div>
-          <div className="flex items-center gap-3">
-            {[
-              { Icon: Instagram, href: 'https://instagram.com' },
-              { Icon: Linkedin, href: 'https://linkedin.com' },
-              { Icon: Twitter, href: 'https://twitter.com' },
-            ].map(({ Icon, href }, i) => (
-              <a
-                key={i}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-cream/15 inline-flex items-center justify-center hover:bg-sage hover:border-sage hover:text-cream transition-colors"
-              >
-                <Icon size={15} />
-              </a>
-            ))}
-          </div>
+          <div className="text-[11px] uppercase tracking-[0.25em] text-cream/40 mb-4">Get in Touch</div>
+          <a
+            href="https://calendar.app.google/oZVEaBwWHHpvrE8L8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-cream border border-cream/15 rounded-full px-5 py-2.5 hover:bg-sage hover:border-sage hover:text-cream transition-colors"
+          >
+            <CalendarDays size={15} /> Book a Call
+          </a>
           <a
             href="mailto:progressa.ventures@gmail.com"
-            className="mt-6 inline-flex items-center gap-2 text-sm text-cream hover:text-sage-light transition-colors"
+            className="mt-5 flex items-center gap-2 text-sm text-cream hover:text-sage-light transition-colors"
           >
-            progressa.ventures@gmail.com <ArrowUpRight size={14} />
+            <Mail size={15} /> progressa.ventures@gmail.com
           </a>
         </div>
       </div>
