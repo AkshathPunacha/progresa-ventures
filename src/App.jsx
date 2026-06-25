@@ -119,14 +119,35 @@ function Nav() {
   const handleLinkClick = (e, href) => {
     try {
       e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        window.history.pushState(null, null, href);
-      }
       setOpen(false);
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      // Header offset (matches scroll-padding-top in index.css).
+      const HEADER_OFFSET = 80;
+      // Live target position — recomputed each tick so the scroll stays
+      // accurate even when lazy-loaded images/videos shift the layout
+      // mid-animation (the cause of landing on the "wrong" section on mobile).
+      const desiredTop = () =>
+        Math.max(0, target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET);
+
+      window.scrollTo({ top: desiredTop(), behavior: 'smooth' });
+      window.history.pushState(null, '', href);
+
+      // Re-aim until we actually settle on the section (handles layout shift
+      // and touch-momentum interrupting the smooth scroll on mobile).
+      let tries = 0;
+      const settle = () => {
+        const goal = desiredTop();
+        if (Math.abs(window.scrollY - goal) > 2 && tries < 12) {
+          tries += 1;
+          window.scrollTo({ top: goal, behavior: tries > 8 ? 'auto' : 'smooth' });
+          setTimeout(settle, 140);
+        }
+      };
+      setTimeout(settle, 450);
     } catch (err) {
-      console.error("Error in handleLinkClick:", err);
+      console.error('Error in handleLinkClick:', err);
     }
   };
 
