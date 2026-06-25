@@ -121,20 +121,10 @@ function Nav() {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        const headerOffset = 70; // collapsed header height
-        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        target.scrollIntoView({ behavior: 'smooth' });
         window.history.pushState(null, null, href);
       }
-
-      setTimeout(() => {
-        setOpen(false);
-      }, 300);
+      setOpen(false);
     } catch (err) {
       console.error("Error in handleLinkClick:", err);
     }
