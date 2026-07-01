@@ -17,6 +17,9 @@ import {
   Play,
   Menu,
   X,
+  Briefcase,
+  GraduationCap,
+  TrendingUp,
 } from 'lucide-react';
 
 const services = [
@@ -113,6 +116,7 @@ function Nav() {
   const links = [
     { href: '#services', label: 'Services' },
     { href: '#why', label: 'Why Us' },
+    { href: '#founder', label: 'Founder' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -931,6 +935,142 @@ function Footer() {
   );
 }
 
+function FounderSection() {
+  const credentials = [
+    { icon: GraduationCap, label: 'Education', value: 'MBA — NMIMS Mumbai' },
+    { icon: Briefcase, label: 'Experience', value: 'KPMG · The Sleep Company · Signify' },
+    { icon: TrendingUp, label: 'Managed', value: '₹100Cr+ categories' },
+  ];
+
+  const stats = [
+    { number: '48h', label: 'Creative turnaround' },
+    { number: '50+', label: 'Influencer campaigns led' },
+    { number: '₹100Cr+', label: 'Categories managed' },
+  ];
+
+  return (
+    <section id="founder" className="py-24 lg:py-32 bg-[#EEF6F1] relative overflow-hidden">
+      <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-sage/10 blur-3xl pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-sage/8 blur-3xl pointer-events-none -translate-x-1/2 translate-y-1/2" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+        {/* Section label */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fade}
+          className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-sage-dark mb-12"
+        >
+          <span className="h-px w-8 bg-sage" />
+          About the Founder
+        </motion.div>
+
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+          {/* Left: Avatar + Stats */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fade}
+            className="lg:col-span-4 flex flex-col gap-8"
+          >
+            {/* Avatar placeholder with initials */}
+            <div className="relative">
+              <div className="w-full aspect-square max-w-xs mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-sage-dark via-sage to-sage-light flex items-center justify-center shadow-2xl overflow-hidden">
+                <div className="text-cream font-display text-8xl font-light select-none">M</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent" />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 lg:-right-6 bg-cream rounded-2xl px-5 py-3 shadow-xl border border-ink/5">
+                <div className="text-xs tracking-[0.2em] uppercase text-ink/50 mb-0.5">Founder & CEO</div>
+                <div className="font-display text-xl text-ink">Muskan Jain</div>
+              </div>
+            </div>
+
+            {/* Stats row */}
+            <div className="grid grid-cols-3 gap-3 mt-6">
+              {stats.map((s) => (
+                <div key={s.label} className="bg-cream rounded-2xl p-4 text-center border border-ink/5 shadow-sm">
+                  <div className="font-display text-xl lg:text-2xl text-sage-dark">{s.number}</div>
+                  <div className="text-[10px] text-ink/50 mt-1 uppercase tracking-wide leading-tight">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right: Bio + Credentials */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fade}
+            custom={1}
+            className="lg:col-span-8"
+          >
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink">
+              Building brands with
+              <br />
+              <span className="italic text-sage-dark">speed & creativity.</span>
+            </h2>
+
+            <p className="mt-8 text-ink/70 leading-relaxed text-base sm:text-lg max-w-2xl">
+              With an MBA from NMIMS Mumbai and experience across KPMG, The Sleep Company, and Signify,
+              I've built expertise in growth strategy, consumer insights, and brand scaling. From managing
+              ₹100Cr+ categories to leading campaigns with 50+ influencers, my journey has been about
+              solving business challenges with speed and creativity.
+            </p>
+
+            <p className="mt-5 text-ink/60 leading-relaxed text-base max-w-2xl">
+              At Progressa Ventures, I'm bringing that experience into AI-led content creation —
+              helping brands scale high-quality creatives in just 48 hours, with smarter workflows
+              and performance-driven outcomes.
+            </p>
+
+            {/* Credential pills */}
+            <div className="mt-10 flex flex-col gap-4">
+              {credentials.map((c, i) => (
+                <motion.div
+                  key={c.label}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={fade}
+                  custom={i + 2}
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-cream border border-ink/8 hover:border-sage transition-colors duration-300 shadow-sm"
+                >
+                  <div className="h-10 w-10 rounded-xl bg-sage/10 flex items-center justify-center shrink-0">
+                    <c.icon size={18} className="text-sage-dark" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] uppercase tracking-[0.2em] text-ink/40">{c.label}</div>
+                    <div className="text-sm font-medium text-ink mt-0.5">{c.value}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-10">
+              <a
+                href="https://calendar.app.google/oZVEaBwWHHpvrE8L8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-cream bg-ink rounded-full px-6 py-3 hover:bg-sage transition-colors duration-300"
+              >
+                <CalendarDays size={15} /> Book a Call with Muskan
+              </a>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <div className="bg-cream text-ink overflow-x-hidden">
@@ -942,6 +1082,7 @@ export default function App() {
         <VideoShowcase />
         <WhyUs />
         <Audience />
+        <FounderSection />
         <ContactSection />
       </main>
       <Footer />
