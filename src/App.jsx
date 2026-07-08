@@ -939,13 +939,13 @@ function FounderSection() {
   const credentials = [
     { icon: GraduationCap, label: 'Education', value: 'MBA — NMIMS Mumbai' },
     { icon: Briefcase, label: 'Experience', value: 'KPMG · The Sleep Company · Signify' },
-    { icon: TrendingUp, label: 'Managed', value: '₹100Cr+ categories' },
+    { icon: TrendingUp, label: 'Category', value: '₹100Cr+ Managed' },
   ];
 
   const stats = [
     { number: '48h', label: 'Creative turnaround' },
     { number: '50+', label: 'Influencer campaigns led' },
-    { number: '₹100Cr+', label: 'Categories managed' },
+    { number: '₹100Cr+', label: 'ARR' },
   ];
 
   return (
@@ -977,11 +977,15 @@ function FounderSection() {
             variants={fade}
             className="lg:col-span-4 flex flex-col gap-8"
           >
-            {/* Avatar placeholder with initials */}
+            {/* Avatar / Profile photo */}
             <div className="relative">
-              <div className="w-full aspect-square max-w-xs mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-sage-dark via-sage to-sage-light flex items-center justify-center shadow-2xl overflow-hidden">
-                <div className="text-cream font-display text-8xl font-light select-none">M</div>
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent" />
+              <div className="w-full aspect-square max-w-xs mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-ink/10 bg-cream">
+                <img 
+                  src={`${import.meta.env.BASE_URL}ProfilePic.jpeg`} 
+                  alt="Muskan Jain" 
+                  className="h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-transparent pointer-events-none" />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 lg:-right-6 bg-cream rounded-2xl px-5 py-3 shadow-xl border border-ink/5">
