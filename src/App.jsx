@@ -939,13 +939,12 @@ function FounderSection() {
   const credentials = [
     { icon: GraduationCap, label: 'Education', value: 'MBA — NMIMS Mumbai' },
     { icon: Briefcase, label: 'Experience', value: 'KPMG · The Sleep Company · Signify' },
-    { icon: TrendingUp, label: 'Category', value: '₹100Cr+ Managed' },
+    { icon: TrendingUp, label: 'Category', value: 'B2C and B2B' },
   ];
 
   const stats = [
     { number: '48h', label: 'Creative turnaround' },
     { number: '50+', label: 'Influencer campaigns led' },
-    { number: '₹100Cr+', label: 'ARR' },
   ];
 
   return (
@@ -995,7 +994,7 @@ function FounderSection() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="grid grid-cols-2 gap-3 mt-6">
               {stats.map((s) => (
                 <div key={s.label} className="bg-cream rounded-2xl p-4 text-center border border-ink/5 shadow-sm">
                   <div className="font-display text-xl lg:text-2xl text-sage-dark">{s.number}</div>
